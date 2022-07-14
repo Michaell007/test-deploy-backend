@@ -1,0 +1,53 @@
+{
+  "author": "Michael Yapi",
+  "license": "ISC",
+  "name": "api-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "scripts": {
+    "dev": "nodemon --exec babel-node index.js",
+    "build": "babel src --out-dir dist",
+    "start": "nodemon --exec babel-node index.js",
+    "startprod": "npm run build && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.gatech.edu/jvila6/node-es6-sample-app.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.18.0",
+    "nodemon": "^1.11.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.2",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "bodymen": "^1.1.1",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "i18n": "^0.13.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.3",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.2",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.0",
+    "shortid": "^2.2.16"
+  }
+}
