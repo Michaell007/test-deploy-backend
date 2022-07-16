@@ -3,14 +3,14 @@ dotenv.config()
 
 module.exports = {
     root: '/api',
-    PORT: process.env.PORT || '8080',
+    PORT: process.env.PORT || '8000',
     SALT: 10,
     DATABASE: {
-        username: 'postgres',
-        password: 'XKZYrVpGXGUVE0PnEX6h',
-        host: 'medequip-svr.cs2ioqwpuzia.us-east-2.rds.amazonaws.com',
-        dialect: 'postgres',
-        name: 'postgres'
+        username: /*process.env.USERNAME || */'postgres',
+        password: process.env.PASSWORD,
+        host: process.env.HOST,
+        dialect: process.env.DIALECT,
+        name: process.env.NAME
     },
     HABILITATION: [
         // USER
