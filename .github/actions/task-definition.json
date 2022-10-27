@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:928229983501:task-definition/test-definitions:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:928229983501:task-definition/medbackend-task-definiton:1",
     "containerDefinitions": [
         {
-            "name": "backend",
-            "image": "928229983501.dkr.ecr.us-east-1.amazonaws.com/repotest:latest",
+            "name": "medequipbackend",
+            "image": "928229983501.dkr.ecr.us-east-1.amazonaws.com/medequipecr",
             "cpu": 0,
             "links": [],
             "portMappings": [
@@ -36,7 +36,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/test-definitions",
+                    "awslogs-group": "/ecs/medbackend-task-definiton",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -45,7 +45,7 @@
             "systemControls": []
         }
     ],
-    "family": "test-definitions",
+    "family": "medbackend-task-definiton",
     "taskRoleArn": "arn:aws:iam::928229983501:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::928229983501:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
@@ -92,13 +92,13 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "cpu": "512",
-    "memory": "1024",
+    "cpu": "2048",
+    "memory": "5120",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2022-07-17T16:34:44.079Z",
+    "registeredAt": "2022-10-27T12:15:39.775Z",
     "registeredBy": "arn:aws:iam::928229983501:root",
     "tags": [
         {
@@ -107,7 +107,7 @@
         },
         {
             "key": "ecs:taskDefinition:stackId",
-            "value": "arn:aws:cloudformation:us-east-1:928229983501:stack/ECS-Console-V2-TaskDefinition-9dbe5981-3b9e-45db-bd4f-c2e1b057db08/59c54810-05ee-11ed-aec2-0eb60936743b"
+            "value": "arn:aws:cloudformation:us-east-1:928229983501:stack/ECS-Console-V2-TaskDefinition-012ee674-533b-4399-9eed-eb0dc9818708/0e950580-55f1-11ed-87f3-12a2d990fc6b"
         }
     ]
 }
